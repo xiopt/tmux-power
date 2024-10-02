@@ -60,6 +60,9 @@ case $TC in
     'sky' )
         TC='#87ceeb'
         ;;
+    'bluemarin' )
+        TC='#66b2b2'
+        ;;
     'everforest' )
         TC='#a7c080'
         ;;
