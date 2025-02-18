@@ -21,7 +21,7 @@ tmux_set() {
 }
 
 # Options and icons
-rarrow=$(tmux_get '@tmux_power_right_arrow_icon' '')
+rarrow=$(tmux_get '@tmux_power_right_arrow_icon' '')
 larrow=$(tmux_get '@tmux_power_left_arrow_icon' '')
 upload_speed_icon=$(tmux_get '@tmux_power_upload_speed_icon' '󰕒')
 download_speed_icon=$(tmux_get '@tmux_power_download_speed_icon' '󰇚')
@@ -151,7 +151,7 @@ tmux_set status-right-bg "$BG"
 tmux_set status-right-fg "$G12"
 tmux_set status-right-length 150
 # RS="#[fg=$G06]$larrow#[fg=$TC,bg=$G06] $time_icon $time_format #[fg=$TC,bg=$G06]$larrow#[fg=$G04,bg=$TC] $date_icon $date_format "
-# RS="#[fg=$TC]$larrow#[fg=$G06,bg=$TC] $user_icon $user@#h "
+RS="#[fg=$TC]$larrow#[fg=$TC,bg=$G06] $user_icon $user@#h "
 RS=""
 if [ "$show_download_speed" = "true" ]; then
     RS="#[fg=$G05,bg=$BG]$larrow#[fg=$TC,bg=$G05] $download_speed_icon #{download_speed} $RS"
@@ -167,7 +167,7 @@ tmux_set status-right "$RS"
 # Window status formats
 # tmux_set window-status-format "#[fg=$BG,bg=$G06]$rarrow#[fg=$TC,bg=$G06] #I:#W#F #[fg=$G06,bg=$BG]$rarrow"
 # tmux_set window-status-current-format "#[fg=$BG,bg=$TC]$rarrow#[fg=$BG,bg=$TC,bold] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
-tmux_set window-status-format " #[fg=$TC,bg=$G06] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
+tmux_set window-status-format " #[fg=$TC,bg=$G06] #I:#W#F "
 tmux_set window-status-current-format " #[fg=$BG,bg=$TC,bold] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
 
 # Window status styles
