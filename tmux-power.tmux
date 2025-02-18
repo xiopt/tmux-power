@@ -135,7 +135,7 @@ tmux_set status-left-fg "$G12"
 tmux_set status-left-length 150
 user=$(whoami)
 # LS="#[fg=$G04,bg=$TC,bold] $user_icon $user@#h #[fg=$TC,bg=$G06,nobold]$rarrow#[fg=$TC,bg=$G06] $session_icon #S "
-LS="#[fg=$TC,bg=$G06] $session_icon#S"
+LS="#[fg=$TC,bg=$G06] $session_icon #S "
 if [ "$show_upload_speed" = "true" ]; then
     LS="$LS#[fg=$G06,bg=$G05]$rarrow#[fg=$TC,bg=$G05] $upload_speed_icon #{upload_speed} #[fg=$G05,bg=$BG]$rarrow"
 else
@@ -164,8 +164,8 @@ fi
 tmux_set status-right "$RS"
 
 # Window status formats
-tmux_set window-status-format "#[fg=$BG,bg=$G06]$rarrow#[fg=$TC,bg=$G06] #I:#W#F #[fg=$G06,bg=$BG]$rarrow"
-tmux_set window-status-current-format "#[fg=$BG,bg=$TC]$rarrow#[fg=$BG,bg=$TC,bold] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
+tmux_set window-status-format "#[fg=$BG,bg=$G06]$rarrow#[fg=$TC,bg=$G06]#I:#W#F#[fg=$G06,bg=$BG]$rarrow"
+tmux_set window-status-current-format "#[fg=$BG,bg=$TC]$rarrow#[fg=$BG,bg=$TC,bold]#I:#W#F#[fg=$TC,bg=$BG,nobold]$rarrow"
 
 # Window status styles
 tmux_set window-status-style "fg=$TC,bg=$BG,none"
