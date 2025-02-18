@@ -107,7 +107,7 @@ if [ "$THEME" = "darkvoid" ]; then
     FG="#fffafa"  # Neovim: fg
     BG="#1c1c1c"  # Neovim: bg
     G04="$BG"     # Use bg for main left/right backgrounds
-    G06=""        # Neovim: visual color for mid sections
+    G06="#303030" # Neovim: visual color for mid sections
     G07="#404040" # Neovim: line_nr color for pane borders
     G12="#585858" # Neovim: comment color for status-left text
 fi
@@ -139,7 +139,7 @@ LS="#[fg=$TC,bg=$G06] $session_icon #S "
 if [ "$show_upload_speed" = "true" ]; then
     LS="$LS#[fg=$G06,bg=$G05]$rarrow#[fg=$TC,bg=$G05] $upload_speed_icon #{upload_speed} #[fg=$G05,bg=$BG]$rarrow"
 else
-    # LS="$LS#[fg=$G06,bg=$BG]$rarrow"
+    LS="$LS#[fg=$G06,bg=$BG]$rarrow"
 fi
 if [[ $prefix_highlight_pos == 'L' || $prefix_highlight_pos == 'LR' ]]; then
     LS="$LS#{prefix_highlight}"
@@ -152,7 +152,6 @@ tmux_set status-right-fg "$G12"
 tmux_set status-right-length 150
 # RS="#[fg=$G06]$larrow#[fg=$TC,bg=$G06] $time_icon $time_format #[fg=$TC,bg=$G06]$larrow#[fg=$G04,bg=$TC] $date_icon $date_format "
 RS="#[fg=$TC]$larrow#[fg=$G06,bg=$TC] $user_icon $user@#h "
-# RS=""
 if [ "$show_download_speed" = "true" ]; then
     RS="#[fg=$G05,bg=$BG]$larrow#[fg=$TC,bg=$G05] $download_speed_icon #{download_speed} $RS"
 fi
@@ -165,10 +164,8 @@ fi
 tmux_set status-right "$RS"
 
 # Window status formats
-# tmux_set window-status-format "#[fg=$BG,bg=$G06]$rarrow#[fg=$TC,bg=$G06] #I:#W#F #[fg=$G06,bg=$BG]$rarrow"
-# tmux_set window-status-current-format "#[fg=$BG,bg=$TC]$rarrow#[fg=$BG,bg=$TC,bold] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
-tmux_set window-status-format " #[fg=$TC,bg=$G06] #I:#W#F "
-tmux_set window-status-current-format " #[fg=$BG,bg=$TC,bold] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
+tmux_set window-status-format "#[fg=$BG,bg=$G06]$rarrow#[fg=$TC,bg=$G06] #I:#W#F #[fg=$G06,bg=$BG]$rarrow"
+tmux_set window-status-current-format "#[fg=$BG,bg=$TC]$rarrow#[fg=$BG,bg=$TC,bold] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
 
 # Window status styles
 tmux_set window-status-style "fg=$TC,bg=$BG,none"
