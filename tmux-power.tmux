@@ -100,14 +100,14 @@ G12='#767676' #243
 
 # Basic foreground and background defaults (from the grayscale palette)
 FG="$G10"
-BG=""
+BG="$G04"
 
 # If the user selected the "nvim" theme, override with Neovim theme colors.
 if [ "$THEME" = "darkvoid" ]; then
     FG="#fffafa"  # Neovim: fg
     BG="#1c1c1c"  # Neovim: bg
     G04="$BG"     # Use bg for main left/right backgrounds
-    G06="#303030" # Neovim: visual color for mid sections
+    G06=""        # Neovim: visual color for mid sections
     G07="#404040" # Neovim: line_nr color for pane borders
     G12="#585858" # Neovim: comment color for status-left text
 fi
