@@ -100,7 +100,7 @@ G12='#767676' #243
 
 # Basic foreground and background defaults (from the grayscale palette)
 FG="$G10"
-BG="$G04"
+BG=""
 
 # If the user selected the "nvim" theme, override with Neovim theme colors.
 if [ "$THEME" = "darkvoid" ]; then
