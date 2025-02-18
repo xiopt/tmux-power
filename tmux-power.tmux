@@ -21,7 +21,7 @@ tmux_set() {
 }
 
 # Options and icons
-rarrow=$(tmux_get '@tmux_power_right_arrow_icon' '')
+rarrow=$(tmux_get '@tmux_power_right_arrow_icon' '')
 larrow=$(tmux_get '@tmux_power_left_arrow_icon' '')
 upload_speed_icon=$(tmux_get '@tmux_power_upload_speed_icon' '󰕒')
 download_speed_icon=$(tmux_get '@tmux_power_download_speed_icon' '󰇚')
@@ -167,7 +167,7 @@ tmux_set status-right "$RS"
 # Window status formats
 # tmux_set window-status-format "#[fg=$BG,bg=$G06]$rarrow#[fg=$TC,bg=$G06] #I:#W#F #[fg=$G06,bg=$BG]$rarrow"
 # tmux_set window-status-current-format "#[fg=$BG,bg=$TC]$rarrow#[fg=$BG,bg=$TC,bold] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
-tmux_set window-status-format " #[fg=$TC,bg=$G06] #I:#W#F "
+tmux_set window-status-format " #[fg=$TC,bg=$G06] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
 tmux_set window-status-current-format " #[fg=$BG,bg=$TC,bold] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
 
 # Window status styles
