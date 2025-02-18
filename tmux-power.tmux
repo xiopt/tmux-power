@@ -76,7 +76,7 @@ default)
     TC='colour3'
     ;;
 darkvoid)
-    TC='#1bfd9c'
+    TC='#2ead78'
     ;;
 *)
     # Allow users to provide a custom color (e.g. a hex code)
