@@ -139,7 +139,7 @@ LS="#[fg=$TC,bg=$G06] $session_icon #S "
 if [ "$show_upload_speed" = "true" ]; then
     LS="$LS#[fg=$G06,bg=$G05]$rarrow#[fg=$TC,bg=$G05] $upload_speed_icon #{upload_speed} #[fg=$G05,bg=$BG]$rarrow"
 else
-    LS="$LS#[fg=$G06,bg=$BG]$rarrow"
+    # LS="$LS#[fg=$G06,bg=$BG]$rarrow"
 fi
 if [[ $prefix_highlight_pos == 'L' || $prefix_highlight_pos == 'LR' ]]; then
     LS="$LS#{prefix_highlight}"
@@ -167,7 +167,7 @@ tmux_set status-right "$RS"
 # Window status formats
 # tmux_set window-status-format "#[fg=$BG,bg=$G06]$rarrow#[fg=$TC,bg=$G06] #I:#W#F #[fg=$G06,bg=$BG]$rarrow"
 # tmux_set window-status-current-format "#[fg=$BG,bg=$TC]$rarrow#[fg=$BG,bg=$TC,bold] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
-tmux_set window-status-format " #[fg=$TC,bg=$G06] #I:#W#F"
+tmux_set window-status-format " #[fg=$TC,bg=$G06] #I:#W#F "
 tmux_set window-status-current-format " #[fg=$BG,bg=$TC,bold] #I:#W#F #[fg=$TC,bg=$BG,nobold]$rarrow"
 
 # Window status styles
