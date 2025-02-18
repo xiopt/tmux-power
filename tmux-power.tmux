@@ -149,7 +149,8 @@ tmux_set status-left "$LS"
 tmux_set status-right-bg "$BG"
 tmux_set status-right-fg "$G12"
 tmux_set status-right-length 150
-RS="#[fg=$G06]$larrow#[fg=$TC,bg=$G06] $time_icon $time_format #[fg=$TC,bg=$G06]$larrow#[fg=$G04,bg=$TC] $date_icon $date_format "
+# RS="#[fg=$G06]$larrow#[fg=$TC,bg=$G06] $time_icon $time_format #[fg=$TC,bg=$G06]$larrow#[fg=$G04,bg=$TC] $date_icon $date_format "
+RS =""
 if [ "$show_download_speed" = "true" ]; then
     RS="#[fg=$G05,bg=$BG]$larrow#[fg=$TC,bg=$G05] $download_speed_icon #{download_speed} $RS"
 fi
