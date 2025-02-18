@@ -104,7 +104,7 @@ BG="$G04"
 
 # If the user selected the "nvim" theme, override with Neovim theme colors.
 if [ "$THEME" = "darkvoid" ]; then
-    FG="#c0c0c0"  # Neovim: fg
+    FG="#fffafa"  # Neovim: fg
     BG="#1c1c1c"  # Neovim: bg
     G04="$BG"     # Use bg for main left/right backgrounds
     G06="#303030" # Neovim: visual color for mid sections
